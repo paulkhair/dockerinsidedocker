@@ -1,0 +1,7 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<sites>
+  <site>
+    <id>default</id>
+    <url>https://plugins.jenkins.io/artifactory</url>
+  </site>
+</sites>

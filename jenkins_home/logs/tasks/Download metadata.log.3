@@ -1,0 +1,486 @@
+Started at Sun Mar 03 12:33:48 UTC 2019
+FATAL: Unhandled exception during updates server check
+net.sf.json.JSONException: JSONObject["updateCenterVersion"] is not a number.
+	at net.sf.json.JSONObject.getInt(JSONObject.java:1969)
+	at hudson.model.UpdateSite.updateData(UpdateSite.java:206)
+	at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:186)
+	at hudson.PluginManager.doCheckUpdatesServer(PluginManager.java:1659)
+	at jenkins.model.DownloadSettings$DailyCheck.execute(DownloadSettings.java:130)
+	at hudson.model.AsyncPeriodicWork$1.run(AsyncPeriodicWork.java:101)
+	at java.lang.Thread.run(Thread.java:748)
+Caused: java.lang.IllegalArgumentException: Could not find (numeric) updateCenterVersion in {"ui":{"activeCategories":[],"activeLabels":[],"activeQuery":"","firstVisit":true,"isFetchingPlugin":false,"isFiltered":false,"isSearching":false,"limit":50,"page":1,"pages":1,"plugin":{"firstRelease":null,"buildDate":"2019-02-20","categories":[],"dependencies":[{"name":"maven-plugin","title":"Maven Integration","optional":false,"version":"3.1","implied":false},{"name":"workflow-job","title":"Pipeline: Job","optional":false,"version":"2.0","implied":false},{"name":"workflow-step-api","title":"Pipeline: Step API","optional":false,"version":"2.3","implied":false},{"name":"ant","title":"Ant","optional":false,"version":"1.2","implied":false},{"name":"credentials","title":"Credentials","optional":false,"version":"1.22","implied":false},{"name":"gradle","title":"Gradle","optional":false,"version":"1.15","implied":false},{"name":"ivy","title":"Ivy","optional":false,"version":"1.17","implied":false},{"name":"workflow-cps","title":"Pipeline: Groovy","optional":false,"version":"2.13","implied":false},{"name":"matrix-project","title":"Matrix Project","optional":false,"version":"1.10","implied":false},{"name":"flexible-publish","title":"Flexible Publish","optional":true,"version":"0.12","implied":false},{"name":"git","title":"Git","optional":true,"version":"2.5.0","implied":false},{"name":"jira","title":"JIRA","optional":true,"version":"2.3","implied":false},{"name":"jenkins-multijob-plugin","title":"Multijob","optional":true,"version":"1.13","implied":false},{"name":"nodejs","title":"NodeJS","optional":true,"version":"1.2.7","implied":false},{"name":"p4","title":"P4","optional":true,"version":"1.3.3","implied":false},{"name":"subversion","title":"Subversion","optional":true,"version":"2.10.1","implied":false},{"name":"perforce","title":"perforce","optional":true,"version":"1.3.7","implied":false},{"name":"bouncycastle-api","title":"bouncycastle API","optional":false,"version":"2.16.0","implied":true},{"name":"command-launcher","title":"Command Agent Launcher","optional":false,"version":"1.0","implied":true},{"name":"jdk-tool","title":"JDK Tool","optional":false,"version":"1.0","implied":true},{"name":"jaxb","title":"JAXB","optional":false,"version":"2.3.0","implied":true}],"maintainers":[{"id":"eyalb","name":"Eyal Ben Moshe","email":"eyalb@jfrog.org"}],"excerpt":"This plugin allows deploying maven artifacts and build info to Artifactory.","gav":"org.jenkins-ci.plugins:artifactory:3.2.1","labels":["pipeline"],"name":"artifactory","previousTimestamp":"2019-02-18T13:11:42.00Z","previousVersion":"3.2.0","releaseTimestamp":"2019-02-20T13:16:17.00Z","requiredCore":"1.642.3","scm":{"issues":null,"link":"https://github.com/jenkinsci/artifactory-plugin","inLatestRelease":null,"sinceLatestRelease":null,"pullRequests":null},"sha1":"/L2dXkQ6tMZHuPLuPAGFIq0PXhc=","stats":{"installations":[{"timestamp":1259625600000,"total":56},{"timestamp":1262304000000,"total":201},{"timestamp":1264982400000,"total":278},{"timestamp":1267401600000,"total":376},{"timestamp":1270080000000,"total":458},{"timestamp":1272672000000,"total":481},{"timestamp":1275350400000,"total":514},{"timestamp":1277942400000,"total":577},{"timestamp":1280620800000,"total":294},{"timestamp":1283299200000,"total":415},{"timestamp":1285891200000,"total":571},{"timestamp":1288569600000,"total":658},{"timestamp":1291161600000,"total":731},{"timestamp":1293840000000,"total":800},{"timestamp":1296518400000,"total":838},{"timestamp":1298937600000,"total":913},{"timestamp":1301616000000,"total":917},{"timestamp":1304208000000,"total":966},{"timestamp":1306886400000,"total":1002},{"timestamp":1309478400000,"total":1041},{"timestamp":1312156800000,"total":1108},{"timestamp":1314835200000,"total":1161},{"timestamp":1317427200000,"total":1233},{"timestamp":1320105600000,"total":1311},{"timestamp":1322697600000,"total":1339},{"timestamp":1325376000000,"total":1408},{"timestamp":1328054400000,"total":1512},{"timestamp":1330560000000,"total":1709},{"timestamp":1333238400000,"total":1739},{"timestamp":1335830400000,"total":1901},{"timestamp":1338508800000,"total":1913},{"timestamp":1341100800000,"total":2015},{"timestamp":1343779200000,"total":2125},{"timestamp":1346457600000,"total":2186},{"timestamp":1349049600000,"total":2439},{"timestamp":1351728000000,"total":2514},{"timestamp":1354320000000,"total":2605},{"timestamp":1356998400000,"total":2721},{"timestamp":1359676800000,"total":2844},{"timestamp":1362096000000,"total":2983},{"timestamp":1364774400000,"total":3133},{"timestamp":1367366400000,"total":3301},{"timestamp":1370044800000,"total":3402},{"timestamp":1372636800000,"total":3501},{"timestamp":1375315200000,"total":3514},{"timestamp":1377993600000,"total":3598},{"timestamp":1380585600000,"total":3745},{"timestamp":1383264000000,"total":3671},{"timestamp":1385856000000,"total":3668},{"timestamp":1388534400000,"total":3963},{"timestamp":1391212800000,"total":4053},{"timestamp":1393632000000,"total":4271},{"timestamp":1396310400000,"total":4324},{"timestamp":1398902400000,"total":4552},{"timestamp":1401580800000,"total":4657},{"timestamp":1404172800000,"total":5026},{"timestamp":1406851200000,"total":5022},{"timestamp":1409529600000,"total":5295},{"timestamp":1412121600000,"total":5613},{"timestamp":1414800000000,"total":5749},{"timestamp":1417392000000,"total":5647},{"timestamp":1420070400000,"total":5961},{"timestamp":1422748800000,"total":6229},{"timestamp":1425168000000,"total":6470},{"timestamp":1427846400000,"total":6464},{"timestamp":1430438400000,"total":6454},{"timestamp":1433116800000,"total":6700},{"timestamp":1435708800000,"total":6829},{"timestamp":1438387200000,"total":6820},{"timestamp":1441065600000,"total":6960},{"timestamp":1443657600000,"total":7196},{"timestamp":1446336000000,"total":7247},{"timestamp":1448928000000,"total":7225},{"timestamp":1451606400000,"total":7435},{"timestamp":1454284800000,"total":6873},{"timestamp":1456790400000,"total":6748},{"timestamp":1459468800000,"total":7219},{"timestamp":1462060800000,"total":7621},{"timestamp":1464739200000,"total":7911},{"timestamp":1467331200000,"total":7809},{"timestamp":1470009600000,"total":8167},{"timestamp":1472688000000,"total":8571},{"timestamp":1475280000000,"total":8521},{"timestamp":1477958400000,"total":8727},{"timestamp":1480550400000,"total":8649},{"timestamp":1483228800000,"total":9395},{"timestamp":1485907200000,"total":9757},{"timestamp":1488326400000,"total":10360},{"timestamp":1491004800000,"total":10083},{"timestamp":1493596800000,"total":10671},{"timestamp":1496275200000,"total":10601},{"timestamp":1498867200000,"total":10723},{"timestamp":1501545600000,"total":11261},{"timestamp":1504224000000,"total":11429},{"timestamp":1506816000000,"total":11776},{"timestamp":1509494400000,"total":11869},{"timestamp":1512086400000,"total":11439},{"timestamp":1514764800000,"total":12345},{"timestamp":1517443200000,"total":12359},{"timestamp":1519862400000,"total":13052},{"timestamp":1522540800000,"total":13035},{"timestamp":1525132800000,"total":12892},{"timestamp":1527811200000,"total":13016},{"timestamp":1530403200000,"total":13208},{"timestamp":1533081600000,"total":13619},{"timestamp":1535760000000,"total":13954},{"timestamp":1538352000000,"total":15422},{"timestamp":1541030400000,"total":15905},{"timestamp":1543640400000,"total":15587},{"timestamp":1546318800000,"total":16693}],"installationsPercentage":[{"timestamp":1259625600000,"percentage":0.3609410248146955},{"timestamp":1262304000000,"percentage":1.2184033460629204},{"timestamp":1264982400000,"percentage":1.5692029803567398},{"timestamp":1267401600000,"percentage":1.9053410357758185},{"timestamp":1270080000000,"percentage":2.2482941436355603},{"timestamp":1272672000000,"percentage":2.2967101179391682},{"timestamp":1275350400000,"percentage":2.3532643530812196},{"timestamp":1277942400000,"percentage":2.528483786152498},{"timestamp":1280620800000,"percentage":3.402383983335262},{"timestamp":1283299200000,"percentage":3.2490409457449307},{"timestamp":1285891200000,"percentage":3.566743706665001},{"timestamp":1288569600000,"percentage":3.5737562459265697},{"timestamp":1291161600000,"percentage":3.675583266291231},{"timestamp":1293840000000,"percentage":3.5731832596364286},{"timestamp":1296518400000,"percentage":3.756331525393339},{"timestamp":1298937600000,"percentage":3.9551204297348814},{"timestamp":1301616000000,"percentage":4.046957059005252},{"timestamp":1304208000000,"percentage":4.031214789467095},{"timestamp":1306886400000,"percentage":4.006237255607533},{"timestamp":1309478400000,"percentage":4.130460659445304},{"timestamp":1312156800000,"percentage":4.0856963752350755},{"timestamp":1314835200000,"percentage":4.035734149054505},{"timestamp":1317427200000,"percentage":4.063406274716583},{"timestamp":1320105600000,"percentage":4.076492537313433},{"timestamp":1322697600000,"percentage":4.222909045035953},{"timestamp":1325376000000,"percentage":4.014026285030076},{"timestamp":1328054400000,"percentage":4.038677279769218},{"timestamp":1330560000000,"percentage":4.265781394303971},{"timestamp":1333238400000,"percentage":4.279246025887101},{"timestamp":1335830400000,"percentage":4.432061922969318},{"timestamp":1338508800000,"percentage":4.395781153059583},{"timestamp":1341100800000,"percentage":4.457077130659824},{"timestamp":1343779200000,"percentage":4.520218672225649},{"timestamp":1346457600000,"percentage":4.5386595797691225},{"timestamp":1349049600000,"percentage":4.662588415216976},{"timestamp":1351728000000,"percentage":4.70848238533141},{"timestamp":1354320000000,"percentage":5.062085851421465},{"timestamp":1356998400000,"percentage":4.782578127746335},{"timestamp":1359676800000,"percentage":4.960407437122824},{"timestamp":1362096000000,"percentage":4.831316910418995},{"timestamp":1364774400000,"percentage":4.882039455231091},{"timestamp":1367366400000,"percentage":5.055517267784669},{"timestamp":1370044800000,"percentage":5.176427625873009},{"timestamp":1372636800000,"percentage":5.07347187201113},{"timestamp":1375315200000,"percentage":5.142765150960793},{"timestamp":1377993600000,"percentage":5.144483049514577},{"timestamp":1380585600000,"percentage":5.047646004340032},{"timestamp":1383264000000,"percentage":4.966515592234323},{"timestamp":1385856000000,"percentage":5.0873080817187},{"timestamp":1388534400000,"percentage":5.142879389550728},{"timestamp":1391212800000,"percentage":5.15524237143693},{"timestamp":1393632000000,"percentage":5.1613293051359515},{"timestamp":1396310400000,"percentage":5.174600895143725},{"timestamp":1398902400000,"percentage":5.3455463566437675},{"timestamp":1401580800000,"percentage":5.405938755136629},{"timestamp":1404172800000,"percentage":5.495839301921247},{"timestamp":1406851200000,"percentage":5.497837867425694},{"timestamp":1409529600000,"percentage":5.519822364923327},{"timestamp":1412121600000,"percentage":5.669754239941818},{"timestamp":1414800000000,"percentage":5.821064782001175},{"timestamp":1417392000000,"percentage":5.723291475366637},{"timestamp":1420070400000,"percentage":5.787828180829579},{"timestamp":1422748800000,"percentage":5.996515109215707},{"timestamp":1425168000000,"percentage":5.751980299245219},{"timestamp":1427846400000,"percentage":5.784547097882698},{"timestamp":1430438400000,"percentage":5.778183641312133},{"timestamp":1433116800000,"percentage":5.698926560400116},{"timestamp":1435708800000,"percentage":5.645574643276401},{"timestamp":1438387200000,"percentage":5.687409310005504},{"timestamp":1441065600000,"percentage":5.634030841461934},{"timestamp":1443657600000,"percentage":5.708573967125722},{"timestamp":1446336000000,"percentage":5.7058948578447195},{"timestamp":1448928000000,"percentage":5.692786510656739},{"timestamp":1451606400000,"percentage":5.861253448955459},{"timestamp":1454284800000,"percentage":6.37646469425812},{"timestamp":1456790400000,"percentage":6.160869168264402},{"timestamp":1459468800000,"percentage":5.850507735572286},{"timestamp":1462060800000,"percentage":5.849708320540374},{"timestamp":1464739200000,"percentage":5.881390836300917},{"timestamp":1467331200000,"percentage":5.997281293919775},{"timestamp":1470009600000,"percentage":6.177293699417593},{"timestamp":1472688000000,"percentage":6.41998427025205},{"timestamp":1475280000000,"percentage":6.418880744864368},{"timestamp":1477958400000,"percentage":6.392516792534373},{"timestamp":1480550400000,"percentage":6.467218998624155},{"timestamp":1483228800000,"percentage":6.66392401920799},{"timestamp":1485907200000,"percentage":6.993162368658706},{"timestamp":1488326400000,"percentage":6.901605489307841},{"timestamp":1491004800000,"percentage":6.995719172142009},{"timestamp":1493596800000,"percentage":7.073680023863975},{"timestamp":1496275200000,"percentage":7.027790299912493},{"timestamp":1498867200000,"percentage":7.1313612300816684},{"timestamp":1501545600000,"percentage":7.294527646784474},{"timestamp":1504224000000,"percentage":7.379261363636363},{"timestamp":1506816000000,"percentage":7.57148092663199},{"timestamp":1509494400000,"percentage":7.364136673015952},{"timestamp":1512086400000,"percentage":7.49302380422109},{"timestamp":1514764800000,"percentage":7.7401516053996104},{"timestamp":1517443200000,"percentage":8.056136782890405},{"timestamp":1519862400000,"percentage":7.943473048061298},{"timestamp":1522540800000,"percentage":7.96760391198044},{"timestamp":1525132800000,"percentage":7.769962813628172},{"timestamp":1527811200000,"percentage":7.691489487431009},{"timestamp":1530403200000,"percentage":7.387024608501118},{"timestamp":1533081600000,"percentage":7.432491431814709},{"timestamp":1535760000000,"percentage":7.244202405735556},{"timestamp":1538352000000,"percentage":7.158705844125702},{"timestamp":1541030400000,"percentage":7.121046599090225},{"timestamp":1543640400000,"percentage":7.1109225449137305},{"timestamp":1546318800000,"percentage":7.171241144958479}],"installationsPerVersion":[{"version":"1.0.7","total":1},{"version":"1.1-SNAPSHOT (private)","total":1},{"version":"1.3.6","total":2},{"version":"1.4.2","total":1},{"version":"1.4.4","total":3},{"version":"2.0.1","total":3},{"version":"2.0.2","total":1},{"version":"2.0.4","total":6},{"version":"2.0.5","total":5},{"version":"2.0.6","total":4},{"version":"2.0.7","total":4},{"version":"2.0.8","total":1},{"version":"2.0.9","total":1},{"version":"2.1.0","total":1},{"version":"2.1.1","total":8},{"version":"2.1.2","total":7},{"version":"2.1.3","total":18},{"version":"2.1.3-h-2","total":1},{"version":"2.1.4","total":13},{"version":"2.1.4-SNAPSHOT (private)","total":1},{"version":"2.1.4.2-SNAPSHOT (private)","total":1},{"version":"2.1.5","total":27},{"version":"2.1.6","total":8},{"version":"2.1.7","total":6},{"version":"2.1.8","total":28},{"version":"2.1.8-forked","total":1},{"version":"2.10.1","total":7},{"version":"2.10.2","total":3},{"version":"2.10.3","total":80},{"version":"2.10.4","total":77},{"version":"2.11.0","total":227},{"version":"2.12.0","total":118},{"version":"2.12.1","total":174},{"version":"2.12.1-SNAPSHOT (private)","total":1},{"version":"2.12.2","total":385},{"version":"2.12.x-SNAPSHOT (private)","total":2},{"version":"2.13.0","total":206},{"version":"2.13.0-forked","total":2},{"version":"2.13.1","total":472},{"version":"2.14.0","total":643},{"version":"2.14.x-SNAPSHOT (private)","total":3},{"version":"2.15.0","total":258},{"version":"2.15.1","total":491},{"version":"2.15.1-ADVA","total":2},{"version":"2.16.0","total":52},{"version":"2.16.1","total":1010},{"version":"2.16.2","total":5772},{"version":"2.16.2-VS","total":1},{"version":"2.16.3-SNAPSHOT (private)","total":1},{"version":"2.16.x-SNAPSHOT (private)","total":6},{"version":"2.16.x-blue3","total":1},{"version":"2.2.0","total":3},{"version":"2.2.0-forked","total":1},{"version":"2.2.1","total":98},{"version":"2.2.2","total":15},{"version":"2.2.3","total":32},{"version":"2.2.4","total":125},{"version":"2.2.5","total":26},{"version":"2.2.7","total":85},{"version":"2.2.7-1.0.0.0","total":1},{"version":"2.2.8-SNAPSHOT (private)","total":1},{"version":"2.3.0","total":122},{"version":"2.3.1","total":178},{"version":"2.3.1-SNAPSHOT (private)","total":1},{"version":"2.3.2-SNAPSHOT (private)","total":2},{"version":"2.4.0","total":9},{"version":"2.4.1","total":18},{"version":"2.4.4","total":33},{"version":"2.4.5","total":13},{"version":"2.4.6","total":54},{"version":"2.4.7","total":320},{"version":"2.4.x-SNAPSHOT (private)","total":2},{"version":"2.5.0","total":55},{"version":"2.5.1","total":96},{"version":"2.5.1-SNAPSHOT (private)","total":1},{"version":"2.6.0","total":194},{"version":"2.6.0-SNAPSHOT (private)","total":1},{"version":"2.7.1","total":4},{"version":"2.7.2","total":190},{"version":"2.7.3-SNAPSHOT (private)","total":1},{"version":"2.8.0","total":8},{"version":"2.8.1","total":93},{"version":"2.8.2","total":138},{"version":"2.9.0","total":47},{"version":"2.9.0-forked","total":1},{"version":"2.9.1","total":145},{"version":"2.9.1-SNAPSHOT (private)","total":1},{"version":"2.9.2","total":156},{"version":"2.9.2-SNAPSHOT (private)","total":1},{"version":"3.0.0","total":1659},{"version":"3.0.x-SNAPSHOT (private)","total":1},{"version":"3.1.0","total":2609},{"version":"3.1.x-SNAPSHOT (private)","total":6}],"installationsPercentagePerVersion":[{"version":"1.0.7","percentage":0.0004295957074796909},{"version":"1.1-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"1.3.6","percentage":0.0008591914149593818},{"version":"1.4.2","percentage":0.0004295957074796909},{"version":"1.4.4","percentage":0.0012887871224390726},{"version":"2.0.1","percentage":0.0012887871224390726},{"version":"2.0.2","percentage":0.0004295957074796909},{"version":"2.0.4","percentage":0.002577574244878145},{"version":"2.0.5","percentage":0.0021479785373984543},{"version":"2.0.6","percentage":0.0017183828299187636},{"version":"2.0.7","percentage":0.0017183828299187636},{"version":"2.0.8","percentage":0.0004295957074796909},{"version":"2.0.9","percentage":0.0004295957074796909},{"version":"2.1.0","percentage":0.0004295957074796909},{"version":"2.1.1","percentage":0.003436765659837527},{"version":"2.1.2","percentage":0.003007169952357836},{"version":"2.1.3","percentage":0.007732722734634436},{"version":"2.1.3-h-2","percentage":0.0004295957074796909},{"version":"2.1.4","percentage":0.005584744197235981},{"version":"2.1.4-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.1.4.2-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.1.5","percentage":0.011599084101951653},{"version":"2.1.6","percentage":0.003436765659837527},{"version":"2.1.7","percentage":0.002577574244878145},{"version":"2.1.8","percentage":0.012028679809431344},{"version":"2.1.8-forked","percentage":0.0004295957074796909},{"version":"2.10.1","percentage":0.003007169952357836},{"version":"2.10.2","percentage":0.0012887871224390726},{"version":"2.10.3","percentage":0.03436765659837527},{"version":"2.10.4","percentage":0.0330788694759362},{"version":"2.11.0","percentage":0.09751822559788982},{"version":"2.12.0","percentage":0.05069229348260352},{"version":"2.12.1","percentage":0.07474965310146621},{"version":"2.12.1-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.12.2","percentage":0.16539434737968098},{"version":"2.12.x-SNAPSHOT (private)","percentage":0.0008591914149593818},{"version":"2.13.0","percentage":0.08849671574081631},{"version":"2.13.0-forked","percentage":0.0008591914149593818},{"version":"2.13.1","percentage":0.20276917393041408},{"version":"2.14.0","percentage":0.2762300399094412},{"version":"2.14.x-SNAPSHOT (private)","percentage":0.0012887871224390726},{"version":"2.15.0","percentage":0.11083569252976025},{"version":"2.15.1","percentage":0.2109314923725282},{"version":"2.15.1-ADVA","percentage":0.0008591914149593818},{"version":"2.16.0","percentage":0.022338976788943924},{"version":"2.16.1","percentage":0.4338916645544878},{"version":"2.16.2","percentage":2.4796264235727756},{"version":"2.16.2-VS","percentage":0.0004295957074796909},{"version":"2.16.3-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.16.x-SNAPSHOT (private)","percentage":0.002577574244878145},{"version":"2.16.x-blue3","percentage":0.0004295957074796909},{"version":"2.2.0","percentage":0.0012887871224390726},{"version":"2.2.0-forked","percentage":0.0004295957074796909},{"version":"2.2.1","percentage":0.0421003793330097},{"version":"2.2.2","percentage":0.006443935612195363},{"version":"2.2.3","percentage":0.013747062639350108},{"version":"2.2.4","percentage":0.053699463434961354},{"version":"2.2.5","percentage":0.011169488394471962},{"version":"2.2.7","percentage":0.03651563513577372},{"version":"2.2.7-1.0.0.0","percentage":0.0004295957074796909},{"version":"2.2.8-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.3.0","percentage":0.05241067631252228},{"version":"2.3.1","percentage":0.07646803593138497},{"version":"2.3.1-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.3.2-SNAPSHOT (private)","percentage":0.0008591914149593818},{"version":"2.4.0","percentage":0.003866361367317218},{"version":"2.4.1","percentage":0.007732722734634436},{"version":"2.4.4","percentage":0.0141766583468298},{"version":"2.4.5","percentage":0.005584744197235981},{"version":"2.4.6","percentage":0.023198168203903306},{"version":"2.4.7","percentage":0.13747062639350108},{"version":"2.4.x-SNAPSHOT (private)","percentage":0.0008591914149593818},{"version":"2.5.0","percentage":0.023627763911382996},{"version":"2.5.1","percentage":0.04124118791805032},{"version":"2.5.1-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.6.0","percentage":0.08334156725106003},{"version":"2.6.0-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.7.1","percentage":0.0017183828299187636},{"version":"2.7.2","percentage":0.08162318442114126},{"version":"2.7.3-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.8.0","percentage":0.003436765659837527},{"version":"2.8.1","percentage":0.03995240079561125},{"version":"2.8.2","percentage":0.05928420763219734},{"version":"2.9.0","percentage":0.02019099825154547},{"version":"2.9.0-forked","percentage":0.0004295957074796909},{"version":"2.9.1","percentage":0.06229137758455518},{"version":"2.9.1-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"2.9.2","percentage":0.06701693036683178},{"version":"2.9.2-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"3.0.0","percentage":0.7126992787088071},{"version":"3.0.x-SNAPSHOT (private)","percentage":0.0004295957074796909},{"version":"3.1.0","percentage":1.1208152008145134},{"version":"3.1.x-SNAPSHOT (private)","percentage":0.002577574244878145}],"currentInstalls":16693,"trend":1106},"title":"Artifactory","url":"http://updates.jenkins-ci.org/download/plugins/artifactory/3.2.1/artifactory.hpi","version":"3.2.1","securityWarnings":[{"versions":[{"firstVersion":null,"lastVersion":"2.16.1"}],"id":"SECURITY-265","message":"Old directly entered credentials stored unencrypted on disk","url":"https://jenkins.io/security/advisory/2018-09-25/#SECURITY-265","active":false}],"wiki":{"content":"\x3ch2 id=\"ArtifactoryPlugin-TheArtifactoryPagedocumentationisavailablehere.\">The Artifactory Page documentation is available \x3ca href=\"https://www.jfrog.com/confluence/display/RTF/Jenkins+Artifactory+Plug-in\" class=\"external-link\" rel=\"nofollow\">here\x3c/a>.\x3c/h2>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>\n\x3cp>\x3cbr>\x3c/p>","url":"https://wiki.jenkins-ci.org/display/JENKINS/Artifactory+Plugin"}},"plugins":[],"query":"","showFilter":false,"showResults":false,"sort":"relevance","total":0,"view":"Tiles"},"data":{"categories":[],"info":{"commit":""},"labels":[],"stats":{"newly":[],"trend":[],"updated":[]}},"routing":{"locationBeforeTransitions":null}};</script></head>
+<body>
+<script src="https://jenkins.io/assets/bower/jquery/jquery.js"></script>
+<!-- starting partial toptoolbar.html.haml -->
+<nav class="navbar navbar-expand-md navbar-dark top bg-dark fixed-top" id="ji-toolbar">
+<a class="navbar-brand" href="https://jenkins.io">
+Jenkins
+</a>
+<button class="navbar-toggler" data-target="#CollapsingNavbar" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="CollapsingNavbar">
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://jenkins.io/node">
+Blog
+</a>
+</li>
+<li class="nav-item dropdown">
+<div aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+Documentation
+</div>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://jenkins.io/doc">
+Use Jenkins
+</a>
+<a class="dropdown-item" href="https://jenkins.io/doc/developer">
+Extend Jenkins
+</a>
+<span class="dropdown-item">
+<strong>
+Use-cases
+</strong>
+</span>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/android">
+&nbsp;-&nbsp;Android
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/c">
+&nbsp;-&nbsp;C/C++
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/docker">
+&nbsp;-&nbsp;Docker
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/embedded">
+&nbsp;-&nbsp;Embedded
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/github">
+&nbsp;-&nbsp;GitHub
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/java">
+&nbsp;-&nbsp;Java
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/php">
+&nbsp;-&nbsp;PHP
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/pipeline">
+&nbsp;-&nbsp;Continuous Delivery
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/python">
+&nbsp;-&nbsp;Python
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/solutions/ruby">
+&nbsp;-&nbsp;Ruby
+</a>
+</div>
+</li>
+<li class="active nav-item">
+<a class="nav-link" href="https://plugins.jenkins.io/">
+Plugins
+</a>
+</li>
+<li class="nav-item dropdown">
+<div aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+Community
+</div>
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://jenkins.io/participate">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/chat" title="Chat with the rest of the Jenkins community on IRC">
+Chat
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/projects/jam">
+Meet
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/events">
+Events
+</a>
+<a class="dropdown-item feature" href="https://issues.jenkins-ci.org/">
+Issue Tracker
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/mailing-lists" title="Browse Jenkins mailing list archives and/or subscribe to lists">
+Mailing Lists
+</a>
+<a class="dropdown-item feature" href="https://wiki.jenkins.io/">
+Wiki
+</a>
+<a class="dropdown-item feature" href="https://accounts.jenkins.io/" title="Create/manage your account for accessing wiki, issue tracker, etc">
+Account Management
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/sigs/">
+<strong>
+Special Interest Groups
+</strong>
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/sigs/advocacy-and-outreach/">
+&nbsp;-&nbsp;Advocacy and Outreach
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/sigs/chinese-localization/">
+&nbsp;-&nbsp;Chinese Localization
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/sigs/cloud-native/">
+&nbsp;-&nbsp;Cloud Native
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/sigs/gsoc/">
+&nbsp;-&nbsp;Google Summer of Code
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/sigs/hw-and-eda/">
+&nbsp;-&nbsp;Hardware and EDA
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/sigs/pipeline-authoring/">
+&nbsp;-&nbsp;Pipeline Authoring
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/sigs/platform/">
+&nbsp;-&nbsp;Platform
+</a>
+</div>
+</li>
+<li class="dropdown nav-item">
+<div aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Sub-projects</div>
+<div class="dropdown-menu">
+<a class="dropdown-item feature" href="https://jenkins.io/projects/">
+Overview
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/projects/blueocean/">
+Blue Ocean
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/projects/evergreen/">
+Evergreen
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/projects/gsoc/">
+Google Summer of Code in Jenkins
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/projects/infrastructure/">
+Infrastructure
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/projects/jam/">
+Jenkins Area Meetups
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/projects/jcasc/">
+Jenkins Configuration as Code
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/projects/jenkins-x/">
+Jenkins X
+</a>
+<a class="dropdown-item feature" href="https://jenkins.io/projects/remoting/">
+Jenkins Remoting
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<div aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+About
+</div>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://jenkins.io/security">
+Security
+</a>
+<a class="dropdown-item" href="https://jenkins.io/press">
+Press
+</a>
+<a class="dropdown-item" href="https://jenkins.io/awards">
+Awards
+</a>
+<a class="dropdown-item" href="https://jenkins.io/project/conduct">
+Conduct
+</a>
+<a class="dropdown-item" href="https://jenkins.io/artwork">
+Artwork
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<div aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+English
+</div>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://jenkins.io/zh">
+中文 Chinese
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link btn btn-outline-secondary" href="https://jenkins.io/download">
+Download
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Spacing to make the fixed-top sticky navbar not occlude any content below it -->
+<div class="pt-4">
+&nbsp;
+</div>
+
+<!-- ending partial toptoolbar.html.haml -->
+<div id="grid-box"><div data-reactroot="" data-reactid="1" data-react-checksum="2105302276"><div data-reactid="2"><section class="modalview" data-reactid="3"><div class="overlayStyles" style="position:fixed;display:block;top:0;left:0;width:100%;height:100%;z-index:99;background-color:rgba(0,0,0,0.3);" data-reactid="4"></div><div class="dialog" style="width:98%;display:block;height:98%;position:absolute;top:1%;left:1%;background-color:#fff;border-radius:2px;z-index:100;box-shadow:0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);" data-reactid="5"><div class="header" style="padding:25px 20px 25px 50px;background-color:#168BB9;color:#ffffff;font-size:18px;font-weight:normal;overflow-y:auto;max-height:20%;min-height:5%;" data-reactid="6"><a role="button" style="cursor:pointer;position:absolute;font-size:3em;color:#ffffff;right:20px;top:5px;" data-reactid="7">×</a><div class="back" data-reactid="8">Find plugins</div></div><div class="content" style="background-color:#FFF;color:#000;overflow-y:auto;max-height:90%;min-height:75%;padding:25px 20px 25px 50px;" data-reactid="9"><div data-reactid="10"><div class="row flex" data-reactid="11"><div class="col-md-9 main" data-reactid="12"><div class="container-fluid padded" data-reactid="13"><h1 class="title" data-reactid="14"><!-- react-text: 15 -->Artifactory<!-- /react-text --><div class="badge-box" data-reactid="16"><!-- react-empty: 17 --></div><span class="v" data-reactid="18">3.2.1</span><span class="sub" data-reactid="19"><!-- react-text: 20 -->Minimum Jenkins requirement: <!-- /react-text --><!-- react-text: 21 -->1.642.3<!-- /react-text --></span><span class="sub" data-reactid="22"><!-- react-text: 23 -->ID: <!-- /react-text --><!-- react-text: 24 -->artifactory<!-- /react-text --></span></h1><div class="row flex" data-reactid="25"><div class="col-md-4" data-reactid="26"><div data-reactid="27"><!-- react-text: 28 -->Installs: <!-- /react-text --><!-- react-text: 29 -->16693<!-- /react-text --></div><div data-reactid="30"><a href="https://github.com/jenkinsci/artifactory-plugin" data-reactid="31">GitHub →</a></div><div data-reactid="32"><!-- react-text: 33 -->Last released: <!-- /react-text --><span title="Wednesday, February 20th 2019" data-reactid="34">11 days ago</span></div></div><div class="col-md-4 maintainers" data-reactid="35"><h5 data-reactid="36">Maintainers</h5><div class="maintainer" data-reactid="37">Eyal Ben Moshe</div></div><div class="col-md-4 dependencies" data-reactid="38"><h5 data-reactid="39">Dependencies</h5><div class="required" data-reactid="40"><a href="/maven-plugin" data-reactid="41"><!-- react-text: 42 -->Maven Integration<!-- /react-text --><!-- react-text: 43 --> v.<!-- /react-text --><!-- react-text: 44 -->3.1<!-- /react-text --><!-- react-text: 45 --> <!-- /react-text --><span class="req" data-reactid="46"><!-- react-text: 47 -->(<!-- /react-text --><!-- react-text: 48 -->required<!-- /react-text --><!-- react-text: 49 -->)<!-- /react-text --></span></a></div><div class="required" data-reactid="50"><a href="/workflow-job" data-reactid="51"><!-- react-text: 52 -->Pipeline: Job<!-- /react-text --><!-- react-text: 53 --> v.<!-- /react-text --><!-- react-text: 54 -->2.0<!-- /react-text --><!-- react-text: 55 --> <!-- /react-text --><span class="req" data-reactid="56"><!-- react-text: 57 -->(<!-- /react-text --><!-- react-text: 58 -->required<!-- /react-text --><!-- react-text: 59 -->)<!-- /react-text --></span></a></div><div class="required" data-reactid="60"><a href="/workflow-step-api" data-reactid="61"><!-- react-text: 62 -->Pipeline: Step API<!-- /react-text --><!-- react-text: 63 --> v.<!-- /react-text --><!-- react-text: 64 -->2.3<!-- /react-text --><!-- react-text: 65 --> <!-- /react-text --><span class="req" data-reactid="66"><!-- react-text: 67 -->(<!-- /react-text --><!-- react-text: 68 -->required<!-- /react-text --><!-- react-text: 69 -->)<!-- /react-text --></span></a></div><div class="required" data-reactid="70"><a href="/ant" data-reactid="71"><!-- react-text: 72 -->Ant<!-- /react-text --><!-- react-text: 73 --> v.<!-- /react-text --><!-- react-text: 74 -->1.2<!-- /react-text --><!-- react-text: 75 --> <!-- /react-text --><span class="req" data-reactid="76"><!-- react-text: 77 -->(<!-- /react-text --><!-- react-text: 78 -->required<!-- /react-text --><!-- react-text: 79 -->)<!-- /react-text --></span></a></div><div class="required" data-reactid="80"><a href="/credentials" data-reactid="81"><!-- react-text: 82 -->Credentials<!-- /react-text --><!-- react-text: 83 --> v.<!-- /react-text --><!-- react-text: 84 -->1.22<!-- /react-text --><!-- react-text: 85 --> <!-- /react-text --><span class="req" data-reactid="86"><!-- react-text: 87 -->(<!-- /react-text --><!-- react-text: 88 -->required<!-- /react-text --><!-- react-text: 89 -->)<!-- /react-text --></span></a></div><div class="required" data-reactid="90"><a href="/gradle" data-reactid="91"><!-- react-text: 92 -->Gradle<!-- /react-text --><!-- react-text: 93 --> v.<!-- /react-text --><!-- react-text: 94 -->1.15<!-- /react-text --><!-- react-text: 95 --> <!-- /react-text --><span class="req" data-reactid="96"><!-- react-text: 97 -->(<!-- /react-text --><!-- react-text: 98 -->required<!-- /react-text --><!-- react-text: 99 -->)<!-- /react-text --></span></a></div><div class="required" data-reactid="100"><a href="/ivy" data-reactid="101"><!-- react-text: 102 -->Ivy<!-- /react-text --><!-- react-text: 103 --> v.<!-- /react-text --><!-- react-text: 104 -->1.17<!-- /react-text --><!-- react-text: 105 --> <!-- /react-text --><span class="req" data-reactid="106"><!-- react-text: 107 -->(<!-- /react-text --><!-- react-text: 108 -->required<!-- /react-text --><!-- react-text: 109 -->)<!-- /react-text --></span></a></div><div class="required" data-reactid="110"><a href="/workflow-cps" data-reactid="111"><!-- react-text: 112 -->Pipeline: Groovy<!-- /react-text --><!-- react-text: 113 --> v.<!-- /react-text --><!-- react-text: 114 -->2.13<!-- /react-text --><!-- react-text: 115 --> <!-- /react-text --><span class="req" data-reactid="116"><!-- react-text: 117 -->(<!-- /react-text --><!-- react-text: 118 -->required<!-- /react-text --><!-- react-text: 119 -->)<!-- /react-text --></span></a></div><div class="required" data-reactid="120"><a href="/matrix-project" data-reactid="121"><!-- react-text: 122 -->Matrix Project<!-- /react-text --><!-- react-text: 123 --> v.<!-- /react-text --><!-- react-text: 124 -->1.10<!-- /react-text --><!-- react-text: 125 --> <!-- /react-text --><span class="req" data-reactid="126"><!-- react-text: 127 -->(<!-- /react-text --><!-- react-text: 128 -->required<!-- /react-text --><!-- react-text: 129 -->)<!-- /react-text --></span></a></div><div class="optional" data-reactid="130"><a href="/flexible-publish" data-reactid="131"><!-- react-text: 132 -->Flexible Publish<!-- /react-text --><!-- react-text: 133 --> v.<!-- /react-text --><!-- react-text: 134 -->0.12<!-- /react-text --><!-- react-text: 135 --> <!-- /react-text --><span class="req" data-reactid="136"><!-- react-text: 137 -->(<!-- /react-text --><!-- react-text: 138 -->optional<!-- /react-text --><!-- react-text: 139 -->)<!-- /react-text --></span></a></div><div class="optional" data-reactid="140"><a href="/git" data-reactid="141"><!-- react-text: 142 -->Git<!-- /react-text --><!-- react-text: 143 --> v.<!-- /react-text --><!-- react-text: 144 -->2.5.0<!-- /react-text --><!-- react-text: 145 --> <!-- /react-text --><span class="req" data-reactid="146"><!-- react-text: 147 -->(<!-- /react-text --><!-- react-text: 148 -->optional<!-- /react-text --><!-- react-text: 149 -->)<!-- /react-text --></span></a></div><div class="optional" data-reactid="150"><a href="/jira" data-reactid="151"><!-- react-text: 152 -->JIRA<!-- /react-text --><!-- react-text: 153 --> v.<!-- /react-text --><!-- react-text: 154 -->2.3<!-- /react-text --><!-- react-text: 155 --> <!-- /react-text --><span class="req" data-reactid="156"><!-- react-text: 157 -->(<!-- /react-text --><!-- react-text: 158 -->optional<!-- /react-text --><!-- react-text: 159 -->)<!-- /react-text --></span></a></div><div class="optional" data-reactid="160"><a href="/jenkins-multijob-plugin" data-reactid="161"><!-- react-text: 162 -->Multijob<!-- /react-text --><!-- react-text: 163 --> v.<!-- /react-text --><!-- react-text: 164 -->1.13<!-- /react-text --><!-- react-text: 165 --> <!-- /react-text --><span class="req" data-reactid="166"><!-- react-text: 167 -->(<!-- /react-text --><!-- react-text: 168 -->optional<!-- /react-text --><!-- react-text: 169 -->)<!-- /react-text --></span></a></div><div class="optional" data-reactid="170"><a href="/nodejs" data-reactid="171"><!-- react-text: 172 -->NodeJS<!-- /react-text --><!-- react-text: 173 --> v.<!-- /react-text --><!-- react-text: 174 -->1.2.7<!-- /react-text --><!-- react-text: 175 --> <!-- /react-text --><span class="req" data-reactid="176"><!-- react-text: 177 -->(<!-- /react-text --><!-- react-text: 178 -->optional<!-- /react-text --><!-- react-text: 179 -->)<!-- /react-text --></span></a></div><div class="optional" data-reactid="180"><a href="/p4" data-reactid="181"><!-- react-text: 182 -->P4<!-- /react-text --><!-- react-text: 183 --> v.<!-- /react-text --><!-- react-text: 184 -->1.3.3<!-- /react-text --><!-- react-text: 185 --> <!-- /react-text --><span class="req" data-reactid="186"><!-- react-text: 187 -->(<!-- /react-text --><!-- react-text: 188 -->optional<!-- /react-text --><!-- react-text: 189 -->)<!-- /react-text --></span></a></div><div class="optional" data-reactid="190"><a href="/subversion" data-reactid="191"><!-- react-text: 192 -->Subversion<!-- /react-text --><!-- react-text: 193 --> v.<!-- /react-text --><!-- react-text: 194 -->2.10.1<!-- /react-text --><!-- react-text: 195 --> <!-- /react-text --><span class="req" data-reactid="196"><!-- react-text: 197 -->(<!-- /react-text --><!-- react-text: 198 -->optional<!-- /react-text --><!-- react-text: 199 -->)<!-- /react-text --></span></a></div><div class="optional" data-reactid="200"><a href="/perforce" data-reactid="201"><!-- react-text: 202 -->perforce<!-- /react-text --><!-- react-text: 203 --> v.<!-- /react-text --><!-- react-text: 204 -->1.3.7<!-- /react-text --><!-- react-text: 205 --> <!-- /react-text --><span class="req" data-reactid="206"><!-- react-text: 207 -->(<!-- /react-text --><!-- react-text: 208 -->optional<!-- /react-text --><!-- react-text: 209 -->)<!-- /react-text --></span></a></div><div class="implied" data-reactid="210"><a href="/bouncycastle-api" data-reactid="211"><!-- react-text: 212 -->bouncycastle API<!-- /react-text --><!-- react-text: 213 --> v.<!-- /react-text --><!-- react-text: 214 -->2.16.0<!-- /react-text --><!-- react-text: 215 --> <!-- /react-text --><span class="req" data-reactid="216"><!-- react-text: 217 -->(<!-- /react-text --><!-- react-text: 218 -->implied<!-- /react-text --><!-- react-text: 219 -->)<!-- /react-text --></span></a><!-- react-text: 220 --> <!-- /react-text --><a href="#" data-reactid="221"><span class="req" data-reactid="222">(what&#x27;s this?)</span></a></div><div class="implied" data-reactid="223"><a href="/command-launcher" data-reactid="224"><!-- react-text: 225 -->Command Agent Launcher<!-- /react-text --><!-- react-text: 226 --> v.<!-- /react-text --><!-- react-text: 227 -->1.0<!-- /react-text --><!-- react-text: 228 --> <!-- /react-text --><span class="req" data-reactid="229"><!-- react-text: 230 -->(<!-- /react-text --><!-- react-text: 231 -->implied<!-- /react-text --><!-- react-text: 232 -->)<!-- /react-text --></span></a><!-- react-text: 233 --> <!-- /react-text --><a href="#" data-reactid="234"><span class="req" data-reactid="235">(what&#x27;s this?)</span></a></div><div class="implied" data-reactid="236"><a href="/jdk-tool" data-reactid="237"><!-- react-text: 238 -->JDK Tool<!-- /react-text --><!-- react-text: 239 --> v.<!-- /react-text --><!-- react-text: 240 -->1.0<!-- /react-text --><!-- react-text: 241 --> <!-- /react-text --><span class="req" data-reactid="242"><!-- react-text: 243 -->(<!-- /react-text --><!-- react-text: 244 -->implied<!-- /react-text --><!-- react-text: 245 -->)<!-- /react-text --></span></a><!-- react-text: 246 --> <!-- /react-text --><a href="#" data-reactid="247"><span class="req" data-reactid="248">(what&#x27;s this?)</span></a></div><div class="implied" data-reactid="249"><a href="/jaxb" data-reactid="250"><!-- react-text: 251 -->JAXB<!-- /react-text --><!-- react-text: 252 --> v.<!-- /react-text --><!-- react-text: 253 -->2.3.0<!-- /react-text --><!-- react-text: 254 --> <!-- /react-text --><span class="req" data-reactid="255"><!-- react-text: 256 -->(<!-- /react-text --><!-- react-text: 257 -->implied<!-- /react-text --><!-- react-text: 258 -->)<!-- /react-text --></span></a><!-- react-text: 259 --> <!-- /react-text --><a href="#" data-reactid="260"><span class="req" data-reactid="261">(what&#x27;s this?)</span></a></div></div></div><div class="content" data-reactid="262"><h2 id="ArtifactoryPlugin-TheArtifactoryPagedocumentationisavailablehere.">The Artifactory Page documentation is available <a href="https://www.jfrog.com/confluence/display/RTF/Jenkins+Artifactory+Plug-in" class="external-link" rel="nofollow">here</a>.</h2>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p></div></div></div><div class="col-md-3 gutter" data-reactid="263"><a href="https://updates.jenkins.io/download/plugins/artifactory" class="btn btn-secondary" data-reactid="264"><i class="icon-box" data-reactid="265"></i><span data-reactid="266">Archives</span><span class="v" data-reactid="267">Get past versions</span></a><div class="chart" data-reactid="268"><div style="padding:0px;" data-reactid="269"><canvas height="200" width="300" data-reactid="270"></canvas></div></div><h5 data-reactid="271">Labels</h5><div class="label-link" data-reactid="272"><a href="/?labels=pipeline" data-reactid="273">pipeline</a></div><div class="update-link" data-reactid="274"><h6 data-reactid="275">Are you maintaining this plugin?</h6><p data-reactid="276"><!-- react-text: 277 -->Visit the <!-- /react-text --><a href="https://wiki.jenkins-ci.org/display/JENKINS/Artifactory+Plugin" target="_wiki" data-reactid="278">Jenkins Plugin Wiki</a><!-- react-text: 279 --> to edit this content.<!-- /react-text --></p></div><div data-reactid="280"><h6 data-reactid="281">Previous Security Warnings</h6><ul data-reactid="282"><li data-reactid="283"><h7 data-reactid="284"><a href="https://jenkins.io/security/advisory/2018-09-25/#SECURITY-265" data-reactid="285">Old directly entered credentials stored unencrypted on disk</a></h7><ul data-reactid="286"><li data-reactid="287">Affects version 2.16.1 and earlier</li></ul></li></ul></div></div></div></div></div></div></section></div></div></div><script type="text/javascript" src="/assets/js/main.js"></script>
+
+
+<script src="https://jenkins.io/assets/bower/anchor-js/anchor.min.js"></script>
+<script src="https://jenkins.io/assets/bower/tether/js/tether.min.js"></script>
+<script src="https://jenkins.io/assets/bower/bootstrap/js/bootstrap.min.js"></script>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="license-box">
+<div id="creativecommons">
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+<p>
+<img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png">
+</p>
+</a>
+<p>
+The content driving this site is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 license.
+</p>
+<p>
+  UI <a href="https://github.com/jenkins-infra/plugin-site/commit/f463c5f">f463c5f</a> / API <a href="https://github.com/jenkins-infra/plugin-site-api/commit/"></a>
+</p>
+</div>
+</div>
+</div>
+<div class="links col-md-8">
+<div class="container">
+<div class="row">
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Resources</h5>
+<ul class="resources">
+<li>
+<a href="https://jenkins.io/events">
+Events
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/doc">
+Documentation
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/node">
+Blog
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Solutions</h5>
+<ul>
+<li>
+<a href="https://jenkins.io/solutions/android">
+Android
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/solutions/c">
+C/C++
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/solutions/docker">
+Docker
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/solutions/embedded">
+Embedded
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/solutions/github">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/solutions/java">
+Java
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/solutions/php">
+PHP
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/solutions/pipeline">
+Continuous Delivery
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/solutions/python">
+Python
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/solutions/ruby">
+Ruby
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Project</h5>
+<ul class="project">
+<li>
+<a href="https://issues.jenkins-ci.org">
+Issue tracker
+</a>
+</li>
+<li>
+<a href="https://wiki.jenkins.io">
+Wiki
+</a>
+</li>
+<li>
+<a href="https://github.com/jenkinsci">
+GitHub
+</a>
+</li>
+<li>
+<a href="https://ci.jenkins.io">
+Jenkins on Jenkins
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="area col-md-3">
+<div class="div-mar">
+<h5>Community</h5>
+<ul class="community">
+<li>
+<a href="https://groups.google.com/forum/#!forum/jenkinsci-users">
+Users mailing list
+</a>
+</li>
+<li>
+<a href="https://groups.google.com/forum/#!forum/jenkinsci-dev">
+Developers mailing list
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/sigs">
+Special Interest Groups
+</a>
+</li>
+<li>
+<a href="https://twitter.com/jenkinsci">
+Twitter
+</a>
+</li>
+<li>
+<a href="https://reddit.com/r/jenkinsci">
+Reddit
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/merchandise">
+Merchandise
+</a>
+</li>
+<li>
+<a href="https://jenkins.io/awards">
+Awards
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-4216293-5', 'auto');
+ga('send', 'pageview');
+ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+  !function(d,s,id) {
+    var js, fjs=d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id=id;
+      js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }
+	at hudson.model.UpdateSite.updateData(UpdateSite.java:211)
+	at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:186)
+	at hudson.PluginManager.doCheckUpdatesServer(PluginManager.java:1659)
+Caused: java.io.IOException: Unhandled exception during updates server check
+	at hudson.PluginManager.doCheckUpdatesServer(PluginManager.java:1673)
+	at jenkins.model.DownloadSettings$DailyCheck.execute(DownloadSettings.java:130)
+	at hudson.model.AsyncPeriodicWork$1.run(AsyncPeriodicWork.java:101)
+	at java.lang.Thread.run(Thread.java:748)
+Finished at Sun Mar 03 12:33:50 UTC 2019. 2371ms

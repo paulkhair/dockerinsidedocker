@@ -1,0 +1,16 @@
+version: "3"
+services:
+
+  jenkins:
+    privileged: true
+    user: root
+    image: jenkinsci/jenkins
+    ports:
+      - "8888:8080"
+    container_name: jenkins
+    volumes:
+      - ./jenkins_home:/var/jenkins_home:rw
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/local/bin/docker:/usr/bin/docker
+
+

@@ -1,0 +1,76 @@
+Started by user [8mha:////4HGqi55go4pcFqQwaDf2mvIskBAwybErQU513dR5k/W/AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYu/dLi1CL9gsTSHABGhyEavwAAAA==[0mpaul naeem
+Building in workspace /var/jenkins_home/workspace/Jenkins-Artifactory
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/paulkhair/test.git # timeout=10
+Fetching upstream changes from https://github.com/paulkhair/test.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/paulkhair/test.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision c2311f50b3233c311da6bf7f1979de2dfea3e75d (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c2311f50b3233c311da6bf7f1979de2dfea3e75d
+Commit message: "copy of Java test"
+ > git rev-list --no-walk c2311f50b3233c311da6bf7f1979de2dfea3e75d # timeout=10
+Jenkins Artifactory Plugin version: 3.2.1
+Artifactory integration is enabled
+[Jenkins-Artifactory] $ java -classpath /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/devops-maven/boot/* -Dmaven.home=/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/devops-maven -Dmaven.conf=/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/devops-maven/conf -DbuildInfoConfig.propertiesFile=/var/jenkins_home/workspace/Jenkins-Artifactory@tmp/artifactory/buildInfo672901190486896569.properties -DbuildInfoConfig.artifactoryResolutionEnabled=true -Dm3plugin.lib=/var/jenkins_home/workspace/Jenkins-Artifactory/cache/artifactory-plugin/3.2.1 -Dclassworlds.conf=/var/jenkins_home/workspace/Jenkins-Artifactory/classworlds7836394848011599531conf -Dmaven.multiModuleProjectDirectory=/var/jenkins_home/workspace/Jenkins-Artifactory/pom.xml org.codehaus.plexus.classworlds.launcher.Launcher -f pom.xml install
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - Scanning for projects...
+[main] INFO org.jfrog.build.extractor.maven.BuildInfoRecorder - Initializing Artifactory Build-Info Recording
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - 
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - -----------------------< devopsarea:devopsarea >------------------------
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - Building devopsarea 1.0
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --------------------------------[ war ]---------------------------------
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - 
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --- maven-enforcer-plugin:1.3.1:enforce (enforce-java) @ devopsarea ---
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - 
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --- maven-resources-plugin:2.6:resources (default-resources) @ devopsarea ---
+[main] WARNING org.apache.maven.shared.filtering.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[main] INFO org.apache.maven.shared.filtering.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /var/jenkins_home/workspace/Jenkins-Artifactory/src/main/resources
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - 
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --- maven-compiler-plugin:3.1:compile (default-compile) @ devopsarea ---
+[main] INFO org.apache.maven.plugin.compiler.CompilerMojo - Nothing to compile - all classes are up to date
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - 
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --- maven-resources-plugin:2.6:testResources (default-testResources) @ devopsarea ---
+[main] WARNING org.apache.maven.shared.filtering.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[main] INFO org.apache.maven.shared.filtering.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /var/jenkins_home/workspace/Jenkins-Artifactory/src/test/resources
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - 
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ devopsarea ---
+[main] INFO org.apache.maven.plugin.compiler.TestCompilerMojo - No sources to compile
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - 
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --- maven-surefire-plugin:2.12.4:test (default-test) @ devopsarea ---
+[main] INFO org.apache.maven.plugin.surefire.SurefirePlugin - No tests to run.
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - 
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --- maven-war-plugin:2.2:war (default-war) @ devopsarea ---
+[main] INFO org.apache.maven.plugin.war.WarMojo - Packaging webapp
+[main] INFO org.apache.maven.plugin.war.WarMojo - Assembling webapp [devopsarea] in [/var/jenkins_home/workspace/Jenkins-Artifactory/target/devopsarea-1.0]
+[main] INFO org.apache.maven.plugin.war.WarMojo - Processing war project
+[main] INFO org.apache.maven.plugin.war.WarMojo - Copying webapp resources [/var/jenkins_home/workspace/Jenkins-Artifactory/src/main/webapp]
+[main] INFO org.apache.maven.plugin.war.WarMojo - Webapp assembled in [219 msecs]
+[main] INFO org.codehaus.plexus.archiver.war.WarArchiver - Building war: /var/jenkins_home/workspace/Jenkins-Artifactory/target/devopsarea-1.0.war
+[main] INFO org.codehaus.plexus.archiver.war.WarArchiver - WEB-INF/web.xml already added, skipping
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - 
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --- maven-install-plugin:2.4:install (default-install) @ devopsarea ---
+[main] INFO org.codehaus.plexus.PlexusContainer - Installing /var/jenkins_home/workspace/Jenkins-Artifactory/target/devopsarea-1.0.war to /var/jenkins_home/.m2/repository/devopsarea/devopsarea/1.0/devopsarea-1.0.war
+[main] INFO org.codehaus.plexus.PlexusContainer - Installing /var/jenkins_home/workspace/Jenkins-Artifactory/pom.xml to /var/jenkins_home/.m2/repository/devopsarea/devopsarea/1.0/devopsarea-1.0.pom
+[main] INFO org.jfrog.build.extractor.maven.BuildDeploymentHelper - Artifactory Build Info Recorder: Saving Build Info to '/var/jenkins_home/workspace/Jenkins-Artifactory/target/build-info.json'
+[main] INFO org.jfrog.build.extractor.maven.BuildInfoClientBuilder - Deploying artifact: http://artifactory:8080/artifactory/ext-release-local/devopsarea/devopsarea/1.0/devopsarea-1.0.war
+[main] INFO org.jfrog.build.extractor.maven.BuildInfoClientBuilder - Deploying artifact: http://artifactory:8080/artifactory/ext-release-local/devopsarea/devopsarea/1.0/devopsarea-1.0.pom
+[main] INFO org.jfrog.build.extractor.maven.BuildDeploymentHelper - Artifactory Build Info Recorder: Deploying build info ...
+[main] INFO org.jfrog.build.extractor.maven.BuildInfoClientBuilder - Deploying build descriptor to: http://artifactory:8080/artifactory/api/build
+[main] INFO org.jfrog.build.extractor.maven.BuildInfoClientBuilder - Build successfully deployed. Browse it in Artifactory under http://artifactory:8080/artifactory/webapp/builds/Jenkins-Artifactory/6
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - ------------------------------------------------------------------------
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - BUILD SUCCESS
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - ------------------------------------------------------------------------
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - Total time:  3.481 s
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - Finished at: 2019-02-26T11:55:09Z
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - ------------------------------------------------------------------------
+Invalid tool ID 
+------------------------------------------------------------------------
+SONAR ANALYSIS FAILED
+------------------------------------------------------------------------
+FATAL: SonarQube Scanner executable was not found for devops-sonar
+ERROR: SonarQube Scanner executable was not found for devops-sonar
+Finished: FAILURE

@@ -1,0 +1,10 @@
+Started on Mar 3, 2019 7:44:00 PM
+Using strategy: Default
+[poll] Last Built Revision: Revision c2311f50b3233c311da6bf7f1979de2dfea3e75d (refs/remotes/origin/master)
+No credentials specified
+ > git --version # timeout=10
+ > git ls-remote -h https://github.com/paulkhair/test.git # timeout=10
+Found 1 remote heads on https://github.com/paulkhair/test.git
+[poll] Latest remote head revision on refs/heads/master is: c2311f50b3233c311da6bf7f1979de2dfea3e75d - already built by 9
+Done. Took 1.7 sec
+No changes
